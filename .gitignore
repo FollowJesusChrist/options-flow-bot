@@ -1,0 +1,16 @@
+# Secrets — never committed
+.env
+.env.local
+.env.*.local
+.discord-token
+
+# Dependencies
+node_modules/
+
+# Generated output
+out/
+analysis/
+*.log
+
+# OS
+.DS_Store

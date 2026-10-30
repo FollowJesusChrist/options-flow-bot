@@ -1,0 +1,19 @@
+{
+  "name": "sr-chart-command",
+  "version": "0.1.0",
+  "private": true,
+  "description": "/chart slash command: on-demand support/resistance chart (paper mode, informational). Lab guild only.",
+  "type": "module",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node listener.js",
+    "register": "node register.js",
+    "register:execute": "node register.js --execute",
+    "dryrun": "node dryrun.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "discord.js": "^14.18.0"
+  }
+}
