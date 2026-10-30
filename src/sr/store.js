@@ -2,7 +2,7 @@
 //
 // Its own SQLite file in the trading-data vault (db/sr.db). It does not write
 // to trading.db; it only READS trading.db's `signals` table for the flow join.
-// No shared state with the-watcher/ or kalba-lab/.
+// No shared state with other bots.
 
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync } from "node:fs";

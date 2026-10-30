@@ -6,7 +6,7 @@ Prepared 2026-10-23 evening. Status: **nothing here has been created or launched
 
 - `~/workspace/options-flow-bot/run-live-scan.sh` — one scan pass, Tradier production, logs signals + context to the vault. Verified working: 45 signals, 3:32 PM Oct 23.
 - `src/discord/embeds.js` + `components.js` — alert embed + Track / Paper Trade / Dismiss buttons (visual only until a gateway exists).
-- Own channel `#options-flow` (1563321008968962088) in the FollowJesusChrist lab server — test alert posted Oct 23, rendered fine.
+- Own channel `#options-flow` (<your-channel-id>) in the FollowJesusChrist lab server — test alert posted Oct 23, rendered fine.
 - Paper mode is structural: no order code anywhere. Paper validation gate: **0 of 30.**
 
 ## What "wired" means — three pieces
@@ -22,7 +22,7 @@ Prepared 2026-10-23 evening. Status: **nothing here has been created or launched
 - HARD LIMIT: never touch `~/workspace/kalba-lab/` or the live Kalba config. Never print tokens; the scan script fetches its own surrogate.
 
 ### 3. Auto-post pipe (code, then wiring)
-- Missing piece today: runner → Discord. Needs a small `src/discord/post.js` that takes a graded signal and POSTs it via REST (bot token) to channel 1563321008968962088 using `buildSignalEmbed` + `signalButtons`.
+- Missing piece today: runner → Discord. Needs a small `src/discord/post.js` that takes a graded signal and POSTs it via REST (bot token) to channel <your-channel-id> using `buildSignalEmbed` + `signalButtons`.
 - The test alert Oct 23 was posted manually — this replaces the manual step.
 - Buttons stay visual-only until a gateway connection exists somewhere (same VM wall as every bot here) — the main agent told Jesus this already.
 

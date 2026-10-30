@@ -63,7 +63,7 @@ install -m 600 /dev/null .discord-token && read -rs T && printf %s "$T" > .disco
 ~/workspace/options-flow-bot/sr-levels-poller/run-poller.sh
 ```
 
-Expected output: `started pid N`, then `sr-levels-poller up as <bot> (<id>); channel 1564371929224450048; every 30s`.
+Expected output: `started pid N`, then `sr-levels-poller up as <bot> (<id>); channel <your-channel-id>; every 30s`.
 `run-poller.sh status` shows whether it's running and the last heartbeat. `run-poller.sh stop` stops it.
 
 ## Tests

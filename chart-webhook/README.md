@@ -168,7 +168,7 @@ interactions to the URL and the gateway listener stops receiving them.
    **Not done.**
 3. Set secrets on the host, by name only: `DISCORD_PUBLIC_KEY`, `DISCORD_BOT_TOKEN`
    (optional), `TRADIER_TOKEN`. **Not done.**
-4. Discord Developer Portal → app 1485163232032460851 → Interactions Endpoint URL →
+4. Discord Developer Portal → app <your-discord-app-id> → Interactions Endpoint URL →
    the deployed `/api/interactions` URL. Discord PINGs it once to validate. Do NOT
    do this step now: it changes where all interactions go. **Not done.**
 5. Re-register the guild `/chart` with `WEBHOOK_CHART_COMMAND` (adds interval and
@@ -202,7 +202,7 @@ Offline run (no Tradier): SPY came from recorded sr.db at $769.95, written to
 
 Rejections, live: ZZZZZ → "I couldn't find ZZZZZ…". AACG → "too thin… price under
 $5; 20-day average volume 23,795 shares". SPY1 and `dte: soon` → parse errors.
-Wrong channel → "/chart works in <#1564371929224450048> only.". A tampered body → 401.
+Wrong channel → "/chart works in <#<your-channel-id>> only.". A tampered body → 401.
 All of these were ephemeral and none produced a chart.
 
 ## Interval + lookback dry run (Oct 28, 2026, ~13:25 ET / 10:25 PT, market open)
@@ -230,7 +230,7 @@ counts only after 16:15 ET.
 Rejections, all ephemeral, with no defer and no chart: `interval:2m` → "\"2m\" isn't an
 interval. Use 5m, 15m, 1h, 4h or daily." `lookback:6months` → "\"6months\" isn't a
 lookback. Use 1week, 1month or 3months." Interval in the wrong channel → "/chart works in
-<#1564371929224450048> only." `lookback:1day` → the 1day reply above. `interval:4h
+<#<your-channel-id>> only." `lookback:1day` → the 1day reply above. `interval:4h
 lookback:1week` → "4h over 1 week is too little data…".
 
 The default dry run (`./run-dryrun-vm.sh`) is unchanged: SPY $771.05 S $763.77–$766.30 /
